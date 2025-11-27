@@ -18,7 +18,8 @@
 
     <!-- External Resources -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Fira+Code&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
@@ -60,12 +61,7 @@
                 </div>
             </div>
             <div class="hero-profile animate-on-scroll">
-                <!-- Placeholder for user image -->
-                <div
-                    style="width: 300px; height: 300px; background-color: #ddd; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 5rem; color: #555;">
-                    <i class="fas fa-user-graduate"></i>
-                </div>
-                <!-- <img src="assets/my_photo.jpg" alt="Nicolás Iglesias García"> -->
+                <img src="assets/my_photo.jpg" alt="Nicolás Iglesias García">
             </div>
         </div>
     </section>
@@ -78,7 +74,8 @@
                 <div class="about-text animate-on-scroll">
                     <p>Hello! I’m Nicolás Iglesias García, a final year student in <strong>Data Science and
                             Engineering</strong> at the University of Oviedo, currently pursuing a <strong>Master's in
-                            Computer Engineering</strong> at EPI Gijón.</p>
+                            Computer Engineering</strong> at EPI Gijón. I am based in <strong>Gijón, Asturias</strong>.
+                    </p>
                     <p>
                         I consider myself a <strong>proactive, sociable, and effective</strong> person. I have a solid
                         foundation in
@@ -101,8 +98,23 @@
                         <div class="skill-item"><span>Power BI</span></div>
                         <div class="skill-item"><span>Streamlit</span></div>
                         <div class="skill-item"><span>C++</span></div>
+                        <div class="skill-item"><span>Docker</span></div>
                         <div class="skill-item"><span>Gen AI</span></div>
                     </div>
+
+                    <h3 style="margin-top: 30px; margin-bottom: 15px; font-size: 1.2rem; color: var(--text-primary);">
+                        Languages</h3>
+                    <ul style="list-style: none; padding: 0; color: var(--text-secondary);">
+                        <li style="margin-bottom: 5px;"><i class="fas fa-language"
+                                style="color: var(--accent); margin-right: 10px;"></i><strong>Spanish:</strong> Native
+                        </li>
+                        <li style="margin-bottom: 5px;"><i class="fas fa-language"
+                                style="color: var(--accent); margin-right: 10px;"></i><strong>English:</strong> C1.1
+                            (Studying), B2 Cambridge Certified</li>
+                        <li><i class="fas fa-language"
+                                style="color: var(--accent); margin-right: 10px;"></i><strong>German:</strong> B2.1
+                            (Studying)</li>
+                    </ul>
 
                 </div>
                 <!-- <div class="about-image animate-on-scroll">
@@ -117,22 +129,24 @@
         <div class="container">
             <h2 style="margin-bottom: 50px;">Education</h2>
             <div class="education-list">
-                <div class="education-item animate-on-scroll">
+                <div class="education-item animate-on-scroll"
+                    style="background: var(--card-bg); padding: 20px; border-radius: 4px; margin-bottom: 20px;">
                     <div class="education-header">
-                        <h3>Universidad de Oviedo</h3>
+                        <h3 style="color: var(--text-primary);">Universidad de Oviedo</h3>
                     </div>
-                    <p><strong>Master in Computer Engineering</strong></p>
-                    <p>Sept 2025 - Dec 2026</p>
-                    <p>Advanced specialization in computer systems.</p>
+                    <p style="color: var(--accent);"><strong>Master in Computer Engineering</strong></p>
+                    <p style="color: var(--text-secondary);">Sept 2025 - Dec 2026</p>
+                    <p style="color: var(--text-secondary);">Advanced specialization in computer systems.</p>
                 </div>
 
-                <div class="education-item animate-on-scroll">
+                <div class="education-item animate-on-scroll"
+                    style="background: var(--card-bg); padding: 20px; border-radius: 4px;">
                     <div class="education-header">
-                        <h3>Universidad de Oviedo</h3>
+                        <h3 style="color: var(--text-primary);">Universidad de Oviedo</h3>
                     </div>
-                    <p><strong>Degree in Data Science & Engineering</strong></p>
-                    <p>Oct 2021 - Jun 2025</p>
-                    <p>Skills: SQL, Machine Learning, Algorithms, Databases.</p>
+                    <p style="color: var(--accent);"><strong>Degree in Data Science & Engineering</strong></p>
+                    <p style="color: var(--text-secondary);">Oct 2021 - Jun 2025</p>
+                    <p style="color: var(--text-secondary);">Skills: SQL, Machine Learning, Algorithms, Databases.</p>
                 </div>
             </div>
         </div>
@@ -147,19 +161,20 @@
                 <div class="skill-card animate-on-scroll">
                     <i class="fas fa-brain"></i>
                     <h3>Data & AI</h3>
-                    <p>Machine Learning, Gen AI, NLP, Supply Chain Optimization, Pandas, Scikit-learn</p>
+                    <p>Machine Learning, Gen AI, NLP, Supply Chain Optimization, Pandas, Scikit-learn, PyTorch,
+                        TensorFlow, Matlab</p>
                 </div>
 
                 <div class="skill-card animate-on-scroll">
                     <i class="fas fa-code"></i>
                     <h3>Development</h3>
-                    <p>Python, R, C++, JavaScript, HTML/CSS, Streamlit</p>
+                    <p>Python, R, C++, C#, JavaScript, HTML/CSS, Streamlit, Arduino</p>
                 </div>
 
                 <div class="skill-card animate-on-scroll">
                     <i class="fas fa-chart-bar"></i>
-                    <h3>Tools</h3>
-                    <p>SQL, Power BI, Excel, PyCharm, Git</p>
+                    <h3>Tools & DevOps</h3>
+                    <p>SQL, Power BI, Excel, PyCharm, Git, Docker, Linux, RabbitMQ, GitLab</p>
                 </div>
 
                 <div class="skill-card animate-on-scroll">
@@ -179,21 +194,37 @@
                 <h2>Projects</h2>
             </div>
 
-            <!-- Project Category Tabs (Optional, keeping simple for now) -->
-            <!-- <div class="project-tabs animate-on-scroll">
-                    <button class="project-tab-btn active" data-category="all">All</button>
-                </div> -->
-
             <div class="project-category active" id="all-projects">
                 <div class="project-grid">
+
+                    <!-- Project 0: FireDrone -->
+                    <div class="project-card animate-on-scroll">
+                        <span class="category-label robotics-label">Drone/Fullstack</span>
+                        <div class="project-image">
+                            <img src="assets/project/firedrone.png" alt="FireDrone Project">
+                            <div class="project-overlay">
+                                <a href="https://github.com/sergiopm9/FireDrone-2526-5" title="View Code"
+                                    target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3>FireDrone-2526-5</h3>
+                            <p>Drone control and simulation system with backend (.NET/C#), frontend (Python), and
+                                RabbitMQ messaging.</p>
+                            <ul class="project-skills">
+                                <li>C#</li>
+                                <li>Python</li>
+                                <li>Docker</li>
+                                <li>RabbitMQ</li>
+                            </ul>
+                        </div>
+                    </div>
 
                     <!-- Project 1: UWB -->
                     <div class="project-card animate-on-scroll">
                         <span class="category-label robotics-label">Robotics/Embedded</span>
                         <div class="project-image">
-                            <div
-                                style="width: 100%; height: 200px; background: linear-gradient(45deg, #1e293b, #3b82f6);">
-                            </div>
+                            <img src="assets/project/uwb.png" alt="UWB Tracking Project">
                             <div class="project-overlay">
                                 <a href="https://github.com/nicogarrr/Indoor-UWB-Tracking-Platform-Firmware-Tools-"
                                     title="View Code" target="_blank" rel="noopener noreferrer"><i
@@ -217,9 +248,7 @@
                     <div class="project-card animate-on-scroll">
                         <span class="category-label robotics-label">AI/Finance</span>
                         <div class="project-image">
-                            <div
-                                style="width: 100%; height: 200px; background: linear-gradient(45deg, #0f172a, #10b981);">
-                            </div>
+                            <img src="assets/project/cava.png" alt="CavaAI Project">
                             <div class="project-overlay">
                                 <a href="https://github.com/nicogarrr/CavaAI" title="View Code" target="_blank"
                                     rel="noopener noreferrer"><i class="fab fa-github"></i></a>
@@ -241,9 +270,7 @@
                     <div class="project-card animate-on-scroll">
                         <span class="category-label robotics-label">HealthTech</span>
                         <div class="project-image">
-                            <div
-                                style="width: 100%; height: 200px; background: linear-gradient(45deg, #c026d3, #db2777);">
-                            </div>
+                            <img src="assets/project/hackathon.png" alt="Hackathon Salud Project">
                             <div class="project-overlay">
                                 <a href="https://github.com/nicogarrr/hackathon_salud/tree/nico" title="View Code"
                                     target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
@@ -347,11 +374,11 @@
             <div class="contact-info animate-on-scroll" style="text-align: center;">
 
                 <div style="display: flex; flex-direction: column; align-items: center;">
-                    <p style="margin-bottom: 15px; text-align: center;">
+                    <p style="margin-bottom: 15px; text-align: center; color: var(--text-secondary);">
                         <i class="fas fa-envelope" style="margin-right: 10px; color: var(--accent);"></i>
                         NICOIGLESIASGARCIA10@GMAIL.COM
                     </p>
-                    <p style="margin-bottom: 30px; text-align: center;">
+                    <p style="margin-bottom: 30px; text-align: center; color: var(--text-secondary);">
                         <i class="fas fa-phone" style="margin-right: 10px; color: var(--accent);"></i> +34 640 50 30 25
                     </p>
                 </div>
@@ -368,7 +395,7 @@
 
     <!-- Footer -->
     <footer>
-        <div class="container">
+        <div class="container" style="text-align: center; padding: 20px; color: var(--text-secondary);">
             <p>&copy; 2025 Nicolás Iglesias García. All rights reserved.</p>
         </div>
     </footer>
