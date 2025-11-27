@@ -484,6 +484,51 @@ h2::after {
     margin-bottom: 10px;
 }
 
+/* Company logos on timeline */
+.company-logo {
+    position: absolute;
+    top: -70px;
+    width: 160px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 3;
+    padding: 10px 14px;
+    background: rgba(255,255,255,0.04);
+    backdrop-filter: blur(6px);
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(2,12,27,0.6);
+}
+
+.company-logo img {
+    max-width: 100%;
+    max-height: 60px;
+    height: auto;
+    object-fit: contain;
+    opacity: 0.98;
+    background: transparent;
+}
+
+/* Positioning for left/right timeline items */
+.timeline-item.left .company-logo {
+    right: -170px;
+}
+
+.timeline-item.right .company-logo {
+    left: -170px;
+}
+
+@media screen and (max-width: 768px) {
+    .timeline-item .company-logo {
+        left: 50%;
+        right: auto;
+        transform: translateX(-50%);
+        top: -60px;
+        width: 200px;
+    }
+}
+
 /* Responsive */
 @media screen and (max-width: 768px) {
     .nav-links {
