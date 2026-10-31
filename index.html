@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Nicolás Iglesias García - AI Engineer</title>
-<meta name="description" content="Nicolás Iglesias García - AI Engineer en Accenture. Agentes de IA, sistemas de inversión y posicionamiento en interiores con UWB. Gijón, Asturias.">
+<meta name="description" content="Nicolás Iglesias García - AI Engineer at Accenture. AI agents, investment research systems and UWB indoor positioning. Gijón, Spain.">
 <meta property="og:title" content="Nicolás Iglesias García - AI Engineer">
-<meta property="og:description" content="AI Engineer. Agentes de IA, sistemas de inversión y posicionamiento UWB en interiores.">
+<meta property="og:description" content="AI Engineer. AI agents, investment research systems and UWB indoor positioning.">
 <meta property="og:type" content="website">
 <style>
 :root{
@@ -29,38 +29,30 @@ body{
 a{color:var(--accent);text-decoration:none}
 a:hover{text-decoration:underline}
 
-/* header */
 header{position:sticky;top:0;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);z-index:10}
 header .wrap{display:flex;align-items:center;justify-content:space-between;height:56px}
 .brand{font-weight:650;letter-spacing:-.01em;color:var(--ink)}
 nav{display:flex;gap:18px;align-items:center;font-size:14px}
 nav a{color:var(--muted)}
 nav a:hover{color:var(--ink);text-decoration:none}
-.lang-btn{font-family:inherit;font-size:12.5px;border:1px solid var(--line);background:var(--card);color:var(--muted);border-radius:999px;padding:3px 10px;cursor:pointer}
-.lang-btn:hover{color:var(--ink);border-color:var(--faint)}
 @media (max-width:560px){ nav a.hide-sm{display:none} }
 
-/* hero */
-.hero{padding:72px 0 40px;display:flex;gap:28px;align-items:center;flex-wrap:wrap}
-.hero img{width:104px;height:104px;border-radius:50%;object-fit:cover;border:1px solid var(--line)}
+.hero{padding:72px 0 40px}
 .kicker{font-family:var(--mono);font-size:13px;color:var(--accent);margin-bottom:10px}
-h1{font-size:clamp(26px,5vw,34px);letter-spacing:-.02em;line-height:1.2}
-.subtitle{color:var(--muted);margin-top:10px;max-width:520px}
-.hero-links{margin-top:18px;display:flex;gap:16px;font-size:14.5px;flex-wrap:wrap}
+h1{font-size:clamp(26px,5vw,34px);letter-spacing:-.02em;line-height:1.2;max-width:600px}
+.subtitle{color:var(--muted);margin-top:12px;max-width:560px}
+.hero-links{margin-top:20px;display:flex;gap:16px;font-size:14.5px;flex-wrap:wrap}
 
-/* sections */
 section{padding:34px 0;border-top:1px solid var(--line)}
 h2{font-size:13px;font-family:var(--mono);text-transform:uppercase;letter-spacing:.12em;color:var(--faint);margin-bottom:22px}
 
-/* projects */
 .project{padding:18px 0;border-bottom:1px solid var(--line)}
 .project:last-child{border-bottom:none}
 .project h3{font-size:17px;letter-spacing:-.01em}
 .project .tag{font-family:var(--mono);font-size:11.5px;color:var(--accent);background:var(--accent-soft);border-radius:4px;padding:2px 7px;margin-left:8px;vertical-align:2px}
-.project p{color:var(--muted);font-size:14.5px;margin-top:6px;max-width:640px}
-.project .stack{font-family:var(--mono);font-size:12.5px;color:var(--faint);margin-top:8px}
+.project p{color:var(--muted);margin-top:4px}
+.project .stack{font-family:var(--mono);font-size:12.5px;color:var(--faint);margin-top:6px}
 
-/* experience / education */
 .item{display:grid;grid-template-columns:1fr;gap:2px;padding:14px 0;border-bottom:1px solid var(--line)}
 .item:last-child{border-bottom:none}
 .item .role{font-weight:600;font-size:15px}
@@ -69,11 +61,9 @@ h2{font-size:13px;font-family:var(--mono);text-transform:uppercase;letter-spacin
 .item .desc{color:var(--muted);font-size:14px;margin-top:4px}
 @media (min-width:620px){ .item{grid-template-columns:1fr auto;align-items:baseline} .item .desc{grid-column:1/-1} }
 
-/* stack */
 .chips{display:flex;flex-wrap:wrap;gap:8px}
 .chips span{font-family:var(--mono);font-size:12.5px;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:4px 12px;background:var(--card)}
 
-/* contact */
 .contact-list{display:flex;flex-direction:column;gap:10px;font-size:15px}
 .contact-list a{font-family:var(--mono);font-size:14px}
 
@@ -85,10 +75,9 @@ footer{padding:32px 0 48px;border-top:1px solid var(--line);color:var(--faint);f
   <div class="wrap">
     <a class="brand" href="#top">Nicolás Iglesias García</a>
     <nav>
-      <a href="#proyectos" class="hide-sm" data-i18n="nav.projects">Proyectos</a>
-      <a href="#experiencia" class="hide-sm" data-i18n="nav.experience">Experiencia</a>
-      <a href="#contacto" class="hide-sm" data-i18n="nav.contact">Contacto</a>
-      <button class="lang-btn" id="langToggle" aria-label="Switch language">EN</button>
+      <a href="#projects" class="hide-sm">Projects</a>
+      <a href="#experience" class="hide-sm">Experience</a>
+      <a href="#contact">Contact</a>
     </nav>
   </div>
 </header>
@@ -96,79 +85,76 @@ footer{padding:32px 0 48px;border-top:1px solid var(--line);color:var(--faint);f
 <main class="wrap" id="top">
 
   <section class="hero" style="border-top:none">
-    <img src="assets/my_photo.jpg" alt="Nicolás Iglesias García">
-    <div>
-      <p class="kicker" data-i18n="hero.kicker">AI Engineer - Gijón, Asturias</p>
-      <h1 data-i18n="hero.title">Construyo agentes de IA y sistemas que salen a producción.</h1>
-      <p class="subtitle" data-i18n="hero.subtitle">AI Engineer en Accenture y estudiante del Máster en Ingeniería Informática (Universidad de Oviedo). Fuera del trabajo: un sistema de investigación de inversiones, un agente personal y posicionamiento en interiores con UWB.</p>
-      <div class="hero-links">
-        <a href="https://github.com/nicogarrr" target="_blank" rel="noopener noreferrer">GitHub</a>
-        <a href="https://www.linkedin.com/in/nicol%C3%A1s-iglesias-garcia-956269217/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-        <a href="mailto:nicoiglesiasgarcia10@gmail.com">Email</a>
-      </div>
+    <p class="kicker">AI Engineer - Gijón, Spain</p>
+    <h1>I build AI agents and systems that ship to production.</h1>
+    <p class="subtitle">AI Engineer at Accenture and M.Sc. student in Computer Engineering (University of Oviedo). On the side: an investment research system, a personal AI agent and indoor positioning with UWB.</p>
+    <div class="hero-links">
+      <a href="https://github.com/nicogarrr" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a href="https://www.linkedin.com/in/nicol%C3%A1s-iglesias-garcia-956269217/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <a href="mailto:nicoiglesiasgarcia10@gmail.com">Email</a>
     </div>
   </section>
 
-  <section id="proyectos">
-    <h2 data-i18n="projects.h">Proyectos</h2>
+  <section id="projects">
+    <h2>Projects</h2>
 
     <div class="project">
       <h3><a href="https://github.com/nicogarrr/GerarAI" target="_blank" rel="noopener noreferrer">GerarAI</a><span class="tag">AGPL-3.0</span></h3>
-      <p data-i18n="projects.gerarai">Sistema operativo de investigación de inversiones: motores de valoración deterministas con traza de cálculo, tesis versionadas con auditoría, biblioteca de conocimiento RAG y disciplina estricta de fuentes (oficial / inferida / sin dato). Más de 9.000 tests con CI completo.</p>
+      <p>Investment research operating system: deterministic valuation engines with a calculation trace, versioned theses with audit, RAG knowledge library and strict source discipline (official / inferred / no data). 9,000+ tests with full CI.</p>
       <p class="stack">Python 3.12 - FastAPI - Next.js 16 - PostgreSQL - Redis</p>
     </div>
 
     <div class="project">
       <h3><a href="https://github.com/nicogarrr/asistenta" target="_blank" rel="noopener noreferrer">Asistenta</a></h3>
-      <p data-i18n="projects.asistenta">Agente personal de IA siempre activo en Telegram: objetivos de varios días con aprobación humana, memoria persistente, uso del ordenador, voz, OCR, panel web local y control de la tele y del iPhone. Corre en tu propio PC; gratis salvo la clave del modelo.</p>
+      <p>Always-on personal AI agent on Telegram: multi-day goals with human approval, persistent memory, computer use, voice, OCR, local web panel, TV and iPhone control. Runs on your own PC; free except the LLM key.</p>
       <p class="stack">TypeScript - Node 24 - SQLite</p>
     </div>
 
     <div class="project">
-      <h3><span data-i18n="projects.lazarillo.name">Lazarillo (TFM, en curso)</span></h3>
-      <p data-i18n="projects.lazarillo">Posicionamiento en interiores fusionando ranging UWB con sensado WiFi CSI: zonas por habitación para el hogar (Home Assistant), detección de caídas para mayores y seguimiento deportivo en pista indoor, todo sobre el mismo montaje ESP32.</p>
+      <h3>Lazarillo (master's thesis, in progress)</h3>
+      <p>Indoor positioning fusing UWB ranging with WiFi CSI sensing: smart-home room zones (Home Assistant), elderly-care fall detection and indoor sports tracking, one ESP32 setup for all three.</p>
       <p class="stack">ESP32 - DW3000 - C++ - Rust - MQTT</p>
     </div>
 
     <div class="project">
-      <h3><a href="https://github.com/nicogarrr/TFG_UWB_Localization" target="_blank" rel="noopener noreferrer" data-i18n="projects.tfg.name">Localización UWB en interiores (TFG)</a></h3>
-      <p data-i18n="projects.tfg">Posicionamiento en tiempo real con precisión de centímetros usando anclas y tags ESP32 sobre MQTT, pensado para fútbol sala y espacios sin GPS. TFG calificado con 10/10.</p>
+      <h3><a href="https://github.com/nicogarrr/TFG_UWB_Localization" target="_blank" rel="noopener noreferrer">UWB Indoor Localization (B.Sc. thesis)</a></h3>
+      <p>Real-time, cm-level indoor positioning with ESP32 anchors and tags over MQTT, built for futsal and other GPS-denied spaces. Thesis graded 10/10.</p>
       <p class="stack">C++ - ESP32 - MQTT</p>
     </div>
 
     <div class="project">
       <h3><a href="https://github.com/nicogarrr/scrapyrealestate" target="_blank" rel="noopener noreferrer">scrapyrealestate</a></h3>
-      <p data-i18n="projects.scrapy">Avisos por Telegram de viviendas nuevas en portales inmobiliarios españoles.</p>
+      <p>Telegram alerts for new listings on Spanish real-estate portals.</p>
       <p class="stack">Python - Scrapy - Playwright - Docker</p>
     </div>
   </section>
 
-  <section id="experiencia">
-    <h2 data-i18n="experience.h">Experiencia</h2>
+  <section id="experience">
+    <h2>Experience</h2>
 
     <div class="item">
       <div>
         <p class="role">AI Engineer</p>
         <p class="org">Accenture</p>
       </div>
-      <p class="when" data-i18n="exp.accenture.when">nov 2024 - actualidad</p>
+      <p class="when">Nov 2024 - present</p>
     </div>
 
     <div class="item">
       <div>
-        <p class="role" data-i18n="exp.esa.role">Investigador I+D (comunicaciones lunares / robótica)</p>
-        <p class="org" data-i18n="exp.esa.org">Universidad de Oviedo - contexto ESA</p>
+        <p class="role">R&D Researcher (lunar comms / robotics)</p>
+        <p class="org">University of Oviedo - ESA context</p>
       </div>
       <p class="when">2025 - 2026</p>
-      <p class="desc" data-i18n="exp.esa.desc">Modelos de propagación en zonas sin infraestructura (superficie lunar, cuevas) y validación experimental con firmware de tracking UWB.</p>
+      <p class="desc">Propagation models for infrastructure-less zones (lunar surface, caves) and experimental validation with UWB tracking firmware.</p>
     </div>
 
     <div class="item">
       <div>
-        <p class="role" data-i18n="exp.edp.role">Estudiante en prácticas (Beca Martín González del Valle)</p>
-        <p class="org">EDP España</p>
+        <p class="role">Student employee (Martín González del Valle scholarship)</p>
+        <p class="org">EDP Spain</p>
       </div>
-      <p class="when" data-i18n="exp.edp.when">oct 2024 - nov 2024</p>
+      <p class="when">Oct 2024 - Nov 2024</p>
     </div>
 
     <div class="item">
@@ -176,28 +162,28 @@ footer{padding:32px 0 48px;border-top:1px solid var(--line);color:var(--faint);f
         <p class="role">Data Scientist (intern)</p>
         <p class="org">Merkle</p>
       </div>
-      <p class="when" data-i18n="exp.merkle.when">veranos 2022 y 2023</p>
+      <p class="when">Summers 2022 and 2023</p>
     </div>
   </section>
 
-  <section id="educacion">
-    <h2 data-i18n="education.h">Educación</h2>
+  <section id="education">
+    <h2>Education</h2>
 
     <div class="item">
       <div>
-        <p class="role" data-i18n="edu.master.role">Máster en Ingeniería Informática</p>
-        <p class="org">Universidad de Oviedo (EPI Gijón)</p>
+        <p class="role">M.Sc. in Computer Engineering</p>
+        <p class="org">University of Oviedo (EPI Gijón)</p>
       </div>
-      <p class="when" data-i18n="edu.master.when">2025 - 2026 (en curso)</p>
+      <p class="when">2025 - 2026 (in progress)</p>
     </div>
 
     <div class="item">
       <div>
-        <p class="role" data-i18n="edu.grado.role">Grado en Ciencia e Ingeniería de Datos</p>
-        <p class="org">Universidad de Oviedo</p>
+        <p class="role">B.Sc. in Data Science &amp; Engineering</p>
+        <p class="org">University of Oviedo</p>
       </div>
       <p class="when">2021 - 2025</p>
-      <p class="desc" data-i18n="edu.grado.desc">TFG calificado con 10/10: localización UWB en interiores.</p>
+      <p class="desc">Thesis graded 10/10: UWB indoor localization.</p>
     </div>
   </section>
 
@@ -206,31 +192,31 @@ footer{padding:32px 0 48px;border-top:1px solid var(--line);color:var(--faint);f
     <div class="chips">
       <span>Python</span><span>TypeScript</span><span>FastAPI</span><span>Next.js</span>
       <span>PostgreSQL</span><span>Redis</span><span>SQLite</span><span>Docker</span>
-      <span>LLMs y agentes</span><span>RAG</span><span>C++</span><span>Rust</span>
+      <span>LLMs &amp; agents</span><span>RAG</span><span>C++</span><span>Rust</span>
       <span>ESP32 / UWB</span><span>MQTT</span><span>Linux</span><span>Git</span>
     </div>
   </section>
 
-  <section id="idiomas">
-    <h2 data-i18n="languages.h">Idiomas</h2>
+  <section id="languages">
+    <h2>Languages</h2>
     <div class="item">
-      <div><p class="role" data-i18n="lang.es">Español</p></div>
-      <p class="when" data-i18n="lang.es.level">nativo</p>
+      <div><p class="role">Spanish</p></div>
+      <p class="when">native</p>
     </div>
     <div class="item">
-      <div><p class="role" data-i18n="lang.en">Inglés</p></div>
-      <p class="when" data-i18n="lang.en.level">B2 certificado (Cambridge), C1 en curso</p>
+      <div><p class="role">English</p></div>
+      <p class="when">B2 certified (Cambridge), studying towards C1</p>
     </div>
     <div class="item">
-      <div><p class="role" data-i18n="lang.de">Alemán</p></div>
-      <p class="when" data-i18n="lang.de.level">B2 en curso</p>
+      <div><p class="role">German</p></div>
+      <p class="when">studying towards B2</p>
     </div>
   </section>
 
-  <section id="contacto">
-    <h2 data-i18n="contact.h">Contacto</h2>
+  <section id="contact">
+    <h2>Contact</h2>
     <div class="contact-list">
-      <p><span data-i18n="contact.mail">Email</span>: <a href="mailto:nicoiglesiasgarcia10@gmail.com">nicoiglesiasgarcia10@gmail.com</a></p>
+      <p>Email: <a href="mailto:nicoiglesiasgarcia10@gmail.com">nicoiglesiasgarcia10@gmail.com</a></p>
       <p>GitHub: <a href="https://github.com/nicogarrr" target="_blank" rel="noopener noreferrer">github.com/nicogarrr</a></p>
       <p>LinkedIn: <a href="https://www.linkedin.com/in/nicol%C3%A1s-iglesias-garcia-956269217/" target="_blank" rel="noopener noreferrer">nicolás-iglesias-garcia</a></p>
     </div>
@@ -240,96 +226,9 @@ footer{padding:32px 0 48px;border-top:1px solid var(--line);color:var(--faint);f
 
 <footer>
   <div class="wrap">
-    <p>© 2026 Nicolás Iglesias García - Gijón, Asturias</p>
+    <p>© 2026 Nicolás Iglesias García - Gijón, Spain</p>
   </div>
 </footer>
 
-<script>
-const i18n = {
-  es: {
-    "nav.projects":"Proyectos","nav.experience":"Experiencia","nav.contact":"Contacto",
-    "hero.kicker":"AI Engineer - Gijón, Asturias",
-    "hero.title":"Construyo agentes de IA y sistemas que salen a producción.",
-    "hero.subtitle":"AI Engineer en Accenture y estudiante del Máster en Ingeniería Informática (Universidad de Oviedo). Fuera del trabajo: un sistema de investigación de inversiones, un agente personal y posicionamiento en interiores con UWB.",
-    "projects.h":"Proyectos",
-    "projects.gerarai":"Sistema operativo de investigación de inversiones: motores de valoración deterministas con traza de cálculo, tesis versionadas con auditoría, biblioteca de conocimiento RAG y disciplina estricta de fuentes (oficial / inferida / sin dato). Más de 9.000 tests con CI completo.",
-    "projects.asistenta":"Agente personal de IA siempre activo en Telegram: objetivos de varios días con aprobación humana, memoria persistente, uso del ordenador, voz, OCR, panel web local y control de la tele y del iPhone. Corre en tu propio PC; gratis salvo la clave del modelo.",
-    "projects.lazarillo.name":"Lazarillo (TFM, en curso)",
-    "projects.lazarillo":"Posicionamiento en interiores fusionando ranging UWB con sensado WiFi CSI: zonas por habitación para el hogar (Home Assistant), detección de caídas para mayores y seguimiento deportivo en pista indoor, todo sobre el mismo montaje ESP32.",
-    "projects.tfg.name":"Localización UWB en interiores (TFG)",
-    "projects.tfg":"Posicionamiento en tiempo real con precisión de centímetros usando anclas y tags ESP32 sobre MQTT, pensado para fútbol sala y espacios sin GPS. TFG calificado con 10/10.",
-    "projects.scrapy":"Avisos por Telegram de viviendas nuevas en portales inmobiliarios españoles.",
-    "experience.h":"Experiencia",
-    "exp.accenture.when":"nov 2024 - actualidad",
-    "exp.esa.role":"Investigador I+D (comunicaciones lunares / robótica)",
-    "exp.esa.org":"Universidad de Oviedo - contexto ESA",
-    "exp.esa.desc":"Modelos de propagación en zonas sin infraestructura (superficie lunar, cuevas) y validación experimental con firmware de tracking UWB.",
-    "exp.edp.role":"Estudiante en prácticas (Beca Martín González del Valle)",
-    "exp.edp.when":"oct 2024 - nov 2024",
-    "exp.merkle.when":"veranos 2022 y 2023",
-    "education.h":"Educación",
-    "edu.master.role":"Máster en Ingeniería Informática",
-    "edu.master.when":"2025 - 2026 (en curso)",
-    "edu.grado.role":"Grado en Ciencia e Ingeniería de Datos",
-    "edu.grado.desc":"TFG calificado con 10/10: localización UWB en interiores.",
-    "languages.h":"Idiomas",
-    "lang.es":"Español","lang.es.level":"nativo",
-    "lang.en":"Inglés","lang.en.level":"B2 certificado (Cambridge), C1 en curso",
-    "lang.de":"Alemán","lang.de.level":"B2 en curso",
-    "contact.h":"Contacto","contact.mail":"Email"
-  },
-  en: {
-    "nav.projects":"Projects","nav.experience":"Experience","nav.contact":"Contact",
-    "hero.kicker":"AI Engineer - Gijón, Asturias (Spain)",
-    "hero.title":"I build AI agents and systems that ship to production.",
-    "hero.subtitle":"AI Engineer at Accenture and M.Sc. student in Computer Engineering (University of Oviedo). On the side: an investment research system, a personal AI agent and indoor positioning with UWB.",
-    "projects.h":"Projects",
-    "projects.gerarai":"Investment research operating system: deterministic valuation engines with a calculation trace, versioned theses with audit, RAG knowledge library and strict source discipline (official / inferred / no data). 9,000+ tests with full CI.",
-    "projects.asistenta":"Always-on personal AI agent on Telegram: multi-day goals with human approval, persistent memory, computer use, voice, OCR, local web panel, TV and iPhone control. Runs on your own PC; free except the LLM key.",
-    "projects.lazarillo.name":"Lazarillo (master's thesis, in progress)",
-    "projects.lazarillo":"Indoor positioning fusing UWB ranging with WiFi CSI sensing: smart-home room zones (Home Assistant), elderly-care fall detection and indoor sports tracking, one ESP32 setup for all three.",
-    "projects.tfg.name":"UWB Indoor Localization (B.Sc. thesis)",
-    "projects.tfg":"Real-time, cm-level indoor positioning with ESP32 anchors and tags over MQTT, built for futsal and other GPS-denied spaces. Thesis graded 10/10.",
-    "projects.scrapy":"Telegram alerts for new listings on Spanish real-estate portals.",
-    "experience.h":"Experience",
-    "exp.accenture.when":"Nov 2024 - present",
-    "exp.esa.role":"R&D Researcher (lunar comms / robotics)",
-    "exp.esa.org":"University of Oviedo - ESA context",
-    "exp.esa.desc":"Propagation models for infrastructure-less zones (lunar surface, caves) and experimental validation with UWB tracking firmware.",
-    "exp.edp.role":"Student employee (Martín González del Valle scholarship)",
-    "exp.edp.when":"Oct 2024 - Nov 2024",
-    "exp.merkle.when":"Summers 2022 and 2023",
-    "education.h":"Education",
-    "edu.master.role":"M.Sc. in Computer Engineering",
-    "edu.master.when":"2025 - 2026 (in progress)",
-    "edu.grado.role":"B.Sc. in Data Science & Engineering",
-    "edu.grado.desc":"Thesis graded 10/10: UWB indoor localization.",
-    "languages.h":"Languages",
-    "lang.es":"Spanish","lang.es.level":"native",
-    "lang.en":"English","lang.en.level":"B2 certified (Cambridge), studying towards C1",
-    "lang.de":"German","lang.de.level":"studying towards B2",
-    "contact.h":"Contact","contact.mail":"Email"
-  }
-};
-function setLang(l){
-  document.documentElement.lang = l;
-  document.querySelectorAll('[data-i18n]').forEach(el=>{
-    const k = el.getAttribute('data-i18n');
-    if(i18n[l][k] !== undefined) el.textContent = i18n[l][k];
-  });
-  document.getElementById('langToggle').textContent = l === 'es' ? 'EN' : 'ES';
-  try{ localStorage.setItem('lang', l); }catch(e){}
-}
-document.getElementById('langToggle').addEventListener('click', ()=>{
-  setLang(document.documentElement.lang === 'es' ? 'en' : 'es');
-});
-let initial = 'es';
-try{
-  const p = new URLSearchParams(location.search).get('lang');
-  if(p === 'es' || p === 'en') initial = p;
-  else initial = localStorage.getItem('lang') || ((navigator.language||'es').startsWith('es') ? 'es' : 'en');
-}catch(e){}
-setLang(initial);
-</script>
 </body>
 </html>
