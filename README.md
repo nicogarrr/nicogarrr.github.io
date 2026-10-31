@@ -1,6 +1,6 @@
 # nicogarrr.github.io
 
-Personal portfolio of Nicolás Iglesias García - AI Engineer at Accenture, Gijón (Spain).
+Personal portfolio of Nicolás Iglesias García - AI Engineer, Gijón (Spain).
 
 - **Live:** <https://nicogarrr.github.io>
 - **Stack:** single-page static site (HTML + CSS + vanilla JS), no build step
