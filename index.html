@@ -1,233 +1,308 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nicolás Iglesias García - AI Engineer</title>
-<meta name="description" content="Nicolás Iglesias García - AI Engineer. AI agents, investment research systems and UWB indoor positioning. Gijón, Spain.">
-<meta property="og:title" content="Nicolás Iglesias García - AI Engineer">
-<meta property="og:description" content="AI Engineer. AI agents, investment research systems and UWB indoor positioning.">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Nicolás Iglesias García · AI Engineer</title>
+<meta name="description" content="Nicolás Iglesias García, AI Engineer in Gijón, Spain. I build AI agents and systems that ship: GerarAI, Asistenta and UWB indoor positioning.">
+<meta property="og:title" content="Nicolás Iglesias García · AI Engineer">
+<meta property="og:description" content="I build AI agents and systems that ship to production. Gijón, Spain.">
 <meta property="og:type" content="website">
-<style>
-:root{
-  --bg:#ffffff; --ink:#111827; --muted:#4b5563; --faint:#6b7280;
-  --line:#e5e7eb; --card:#f9fafb; --accent:#1d4ed8; --accent-soft:#eff6ff;
-  --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
-}
-@media (prefers-color-scheme: dark){
-  :root{ --bg:#0b0f14; --ink:#e5e7eb; --muted:#9ca3af; --faint:#6b7280;
-    --line:#1f2937; --card:#111827; --accent:#60a5fa; --accent-soft:#0f1b2d; }
-}
-*{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{
-  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
-  background:var(--bg); color:var(--ink); line-height:1.65; font-size:16px;
-  -webkit-font-smoothing:antialiased;
-}
-.wrap{max-width:760px;margin:0 auto;padding:0 20px}
-a{color:var(--accent);text-decoration:none}
-a:hover{text-decoration:underline}
-
-header{position:sticky;top:0;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);z-index:10}
-header .wrap{display:flex;align-items:center;justify-content:space-between;height:56px}
-.brand{font-weight:650;letter-spacing:-.01em;color:var(--ink)}
-nav{display:flex;gap:18px;align-items:center;font-size:14px}
-nav a{color:var(--muted)}
-nav a:hover{color:var(--ink);text-decoration:none}
-@media (max-width:560px){ nav a.hide-sm{display:none} }
-
-.hero{padding:72px 0 40px}
-.kicker{font-family:var(--mono);font-size:13px;color:var(--accent);margin-bottom:10px}
-h1{font-size:clamp(26px,5vw,34px);letter-spacing:-.02em;line-height:1.2;max-width:600px}
-.subtitle{color:var(--muted);margin-top:12px;max-width:560px}
-.hero-links{margin-top:20px;display:flex;gap:16px;font-size:14.5px;flex-wrap:wrap}
-
-section{padding:34px 0;border-top:1px solid var(--line)}
-h2{font-size:13px;font-family:var(--mono);text-transform:uppercase;letter-spacing:.12em;color:var(--faint);margin-bottom:22px}
-
-.project{padding:18px 0;border-bottom:1px solid var(--line)}
-.project:last-child{border-bottom:none}
-.project h3{font-size:17px;letter-spacing:-.01em}
-.project .tag{font-family:var(--mono);font-size:11.5px;color:var(--accent);background:var(--accent-soft);border-radius:4px;padding:2px 7px;margin-left:8px;vertical-align:2px}
-.project p{color:var(--muted);margin-top:4px}
-.project .stack{font-family:var(--mono);font-size:12.5px;color:var(--faint);margin-top:6px}
-
-.item{display:grid;grid-template-columns:1fr;gap:2px;padding:14px 0;border-bottom:1px solid var(--line)}
-.item:last-child{border-bottom:none}
-.item .role{font-weight:600;font-size:15px}
-.item .org{color:var(--muted);font-size:14px}
-.item .when{font-family:var(--mono);font-size:12.5px;color:var(--faint)}
-.item .desc{color:var(--muted);font-size:14px;margin-top:4px}
-@media (min-width:620px){ .item{grid-template-columns:1fr auto;align-items:baseline} .item .desc{grid-column:1/-1} }
-
-.chips{display:flex;flex-wrap:wrap;gap:8px}
-.chips span{font-family:var(--mono);font-size:12.5px;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:4px 12px;background:var(--card)}
-
-.contact-list{display:flex;flex-direction:column;gap:10px;font-size:15px}
-.contact-list a{font-family:var(--mono);font-size:14px}
-
-footer{padding:32px 0 48px;border-top:1px solid var(--line);color:var(--faint);font-size:13px}
-</style>
+<meta property="og:url" content="https://nicogarrr.github.io/">
+<meta property="og:image" content="https://nicogarrr.github.io/assets/img/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#000000">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="assets/fonts/inter.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="styles.css">
+<script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
 </head>
 <body>
-<header>
-  <div class="wrap">
-    <a class="brand" href="#top">Nicolás Iglesias García</a>
-    <nav>
-      <a href="#projects" class="hide-sm">Projects</a>
-      <a href="#experience" class="hide-sm">Experience</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </div>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="island" id="island">
+  <nav aria-label="Main">
+    <a class="island-brand" href="#top" aria-label="Back to top"><span class="dot" aria-hidden="true"></span><span>Nicolás</span></a>
+    <ul>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#how">How I work</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="theme" id="theme" type="button" aria-label="Switch colour theme">
+      <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path class="sun" d="M12 4V2m0 20v-2m8-8h2M2 12h2m13.66-5.66 1.41-1.41M4.93 19.07l1.41-1.41m0-11.32L4.93 4.93m14.14 14.14-1.41-1.41M12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10z"/><path class="moon" d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+    </button>
+  </nav>
 </header>
 
-<main class="wrap" id="top">
+<main id="main">
 
-  <section class="hero" style="border-top:none">
-    <p class="kicker">AI Engineer - Gijón, Spain</p>
-    <h1>I build AI agents and systems that ship to production.</h1>
-    <p class="subtitle">AI Engineer and M.Sc. student in Computer Engineering (University of Oviedo). On the side: an investment research system, a personal AI agent and indoor positioning with UWB.</p>
-    <div class="hero-links">
-      <a href="https://github.com/nicogarrr" target="_blank" rel="noopener noreferrer">GitHub</a>
-      <a href="https://www.linkedin.com/in/nicol%C3%A1s-iglesias-garcia-956269217/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-      <a href="mailto:nicoiglesiasgarcia10@gmail.com">Email</a>
+<!-- HERO -->
+<section class="hero" id="top" aria-labelledby="hero-title">
+  <div class="ripples" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+  <div class="hero-inner">
+    <img class="avatar" src="assets/img/nicolas.webp" width="120" height="120" alt="Portrait of Nicolás Iglesias García">
+    <h1 id="hero-title"><span class="hello">Hello,</span><span class="iam">I'm Nicolás.</span></h1>
+    <p class="hero-sub">AI Engineer in Gijón, Spain. I build AI agents and systems that ship to production.</p>
+    <div class="cta">
+      <a class="btn btn-light" href="#projects">See the work</a>
+      <a class="btn btn-ghost" href="#contact">Get in touch</a>
     </div>
-  </section>
+  </div>
+  <a class="scroll-cue" href="#statement" aria-label="Scroll down"><span></span></a>
+</section>
 
-  <section id="projects">
-    <h2>Projects</h2>
+<!-- STATEMENT -->
+<section class="statement" id="statement" aria-label="About">
+  <p class="reveal-words">I'm an AI Engineer and an M.Sc. student in Computer Engineering at the University of Oviedo. I like systems that hold up after the demo: an investment research platform with a calculation trace for every number, a personal agent that runs on your own PC, and centimetre-level positioning where GPS can't reach.</p>
+</section>
 
-    <div class="project">
-      <h3><a href="https://github.com/nicogarrr/GerarAI" target="_blank" rel="noopener noreferrer">GerarAI</a><span class="tag">AGPL-3.0</span> <a class="tag" href="https://gerarai.duckdns.org" target="_blank" rel="noopener noreferrer">Live app (access by request)</a></h3>
-      <p>Investment research operating system: deterministic valuation engines with a calculation trace, versioned theses with audit, RAG knowledge library and strict source discipline (official / inferred / no data). 9,000+ tests with full CI.</p>
-      <p class="stack">Python 3.12 - FastAPI - Next.js 16 - PostgreSQL - Redis</p>
-    </div>
+<!-- CHAPTER: PROJECTS -->
+<section class="chapter" id="projects" aria-label="Projects"><h2 class="chapter-title">Projects.</h2></section>
 
-    <div class="project">
-      <h3><a href="https://github.com/nicogarrr/asistenta" target="_blank" rel="noopener noreferrer">Asistenta</a></h3>
-      <p>Always-on personal AI agent on Telegram: multi-day goals with human approval, persistent memory, computer use, voice, OCR, local web panel, TV and iPhone control. Runs on your own PC; free except the LLM key.</p>
-      <p class="stack">TypeScript - Node 24 - SQLite</p>
-    </div>
-
-    <div class="project">
-      <h3>Lazarillo (master's thesis, in progress)</h3>
-      <p>Indoor positioning fusing UWB ranging with WiFi CSI sensing: smart-home room zones (Home Assistant), elderly-care fall detection and indoor sports tracking, one ESP32 setup for all three.</p>
-      <p class="stack">ESP32 - DW3000 - C++ - Rust - MQTT</p>
-    </div>
-
-    <div class="project">
-      <h3><a href="https://github.com/nicogarrr/TFG_UWB_Localization" target="_blank" rel="noopener noreferrer">UWB Indoor Localization (B.Sc. thesis)</a></h3>
-      <p>Real-time, cm-level indoor positioning with ESP32 anchors and tags over MQTT, built for futsal and other GPS-denied spaces. Thesis graded 10/10.</p>
-      <p class="stack">C++ - ESP32 - MQTT</p>
-    </div>
-
-    <div class="project">
-      <h3><a href="https://github.com/nicogarrr/scrapyrealestate" target="_blank" rel="noopener noreferrer">scrapyrealestate</a></h3>
-      <p>Telegram alerts for new listings on Spanish real-estate portals.</p>
-      <p class="stack">Python - Scrapy - Playwright - Docker</p>
-    </div>
-  </section>
-
-  <section id="experience">
-    <h2>Experience</h2>
-
-    <div class="item">
-      <div>
-        <p class="role">AI Engineer</p>
+<!-- GERARAI -->
+<article class="proj proj-light" id="gerarai" aria-labelledby="gerarai-title">
+  <div class="wrap">
+    <div class="proj-head reveal">
+      <img class="proj-logo" src="assets/img/gerarai-logo.png" width="167" height="76" alt="GerarAI logo">
+      <p class="eyebrow">Investment research OS · 2025 – today</p>
+      <h3 id="gerarai-title" class="proj-title">Every number,<br>with its trace.</h3>
+      <p class="proj-desc">GerarAI keeps company evidence, valuation, versioned theses and portfolio decisions together. Deterministic valuation engines with a calculation trace, theses audited before they publish, a RAG knowledge library and strict source discipline: official, inferred or no data.</p>
+      <div class="btns">
+        <a class="btn btn-dark" href="https://gerarai.duckdns.org" rel="noopener">Live app <span class="muted-in">· access by request</span></a>
+        <a class="btn btn-outline" href="https://github.com/nicogarrr/GerarAI" rel="noopener">Source on GitHub</a>
       </div>
-      <p class="when">Nov 2024 - present</p>
     </div>
 
-    <div class="item">
-      <div>
-        <p class="role">R&D Researcher (lunar comms / robotics)</p>
-        <p class="org">University of Oviedo - ESA context</p>
+    <div class="device-stage reveal">
+      <div class="laptop" role="img" aria-label="GerarAI screens with sample data: portfolio positions, watchlist and the Spanish tax draft">
+        <div class="laptop-screen">
+          <div class="laptop-bar" aria-hidden="true"><i></i><i></i><i></i><span>gerarai</span></div>
+          <div class="slides">
+            <img src="assets/img/ger_pos.webp" srcset="assets/img/ger_pos-760.webp 760w, assets/img/ger_pos.webp 1400w" sizes="(max-width:640px) 92vw, 900px" width="1400" height="848" alt="" loading="lazy">
+            <img src="assets/img/ger_watch.webp" srcset="assets/img/ger_watch-760.webp 760w, assets/img/ger_watch.webp 1400w" sizes="(max-width:640px) 92vw, 900px" width="1400" height="848" alt="" loading="lazy">
+            <img src="assets/img/ger_irpf.webp" srcset="assets/img/ger_irpf-760.webp 760w, assets/img/ger_irpf.webp 1400w" sizes="(max-width:640px) 92vw, 900px" width="1400" height="848" alt="" loading="lazy">
+          </div>
+        </div>
+        <div class="laptop-base" aria-hidden="true"></div>
       </div>
-      <p class="when">2025 - 2026</p>
-      <p class="desc">Propagation models for infrastructure-less zones (lunar surface, caves) and experimental validation with UWB tracking firmware.</p>
-    </div>
-
-    <div class="item">
-      <div>
-        <p class="role">Student employee (Martín González del Valle scholarship)</p>
-        <p class="org">EDP Spain</p>
+      <div class="phone phone-float" aria-hidden="true">
+        <div class="phone-notch"></div>
+        <div class="phone-screen ger-alert">
+          <p class="pm-time">9:41</p>
+          <div class="notif n1"><b>GerarAI</b><span>Thesis audit finished · 2 open risks</span></div>
+          <div class="notif n2"><b>GerarAI</b><span>Valuation updated with its trace</span></div>
+          <div class="notif n3"><b>GerarAI</b><span>Watchlist signal on a followed stock</span></div>
+        </div>
       </div>
-      <p class="when">Oct 2024 - Nov 2024</p>
     </div>
+    <p class="caption">Real GerarAI screens from a local run with invented sample companies. The UI is in Spanish.</p>
 
-    <div class="item">
-      <div>
-        <p class="role">Data Scientist (intern)</p>
-        <p class="org">Merkle</p>
+    <div class="bento">
+      <div class="card stat reveal"><p class="k">Commits</p><p class="v"><span class="count" data-to="7800">7,800</span>+</p><p class="s">Since 28 Sep 2025</p><svg class="spark" viewBox="0 0 120 30" aria-hidden="true"><path d="M0 28 L15 26 L30 24 L45 20 L60 21 L75 14 L90 12 L105 6 L120 2"/></svg></div>
+      <div class="card stat reveal"><p class="k">Backend tests</p><p class="v"><span class="count" data-to="16000">16,000</span>+</p><p class="s">pytest functions in the repo</p></div>
+      <div class="card stat reveal"><p class="k">Frontend tests</p><p class="v"><span class="count" data-to="6500">6,500</span>+</p><p class="s">Vitest + Testing Library</p></div>
+      <div class="card stat reveal accent"><p class="k">Release</p><p class="v">v0.5.0</p><p class="s">Production baseline, 30 Oct 2026</p></div>
+      <div class="card wide reveal">
+        <p class="k">Source discipline</p>
+        <div class="sources">
+          <span class="src s-ok">Official</span><span class="src s-mid">Inferred</span><span class="src s-no">No data</span>
+        </div>
+        <p class="s">Every figure carries where it came from. If there is no source, it says so instead of guessing.</p>
       </div>
-      <p class="when">Summers 2022 and 2023</p>
-    </div>
-  </section>
-
-  <section id="education">
-    <h2>Education</h2>
-
-    <div class="item">
-      <div>
-        <p class="role">M.Sc. in Computer Engineering</p>
-        <p class="org">University of Oviedo (EPI Gijón)</p>
+      <div class="card wide reveal marquee-card">
+        <p class="k">Stack</p>
+        <div class="marquee" role="img" aria-label="Python 3.12, FastAPI, Next.js 16, PostgreSQL, Redis, RAG, CI with coverage and CodeQL">
+          <div class="track" aria-hidden="true">
+            <span>Python 3.12</span><span>FastAPI</span><span>Next.js 16</span><span>PostgreSQL</span><span>Redis</span><span>RAG</span><span>CodeQL</span><span>Coverage CI</span>
+            <span>Python 3.12</span><span>FastAPI</span><span>Next.js 16</span><span>PostgreSQL</span><span>Redis</span><span>RAG</span><span>CodeQL</span><span>Coverage CI</span>
+          </div>
+        </div>
       </div>
-      <p class="when">2025 - 2026 (in progress)</p>
     </div>
+  </div>
+</article>
 
-    <div class="item">
-      <div>
-        <p class="role">B.Sc. in Data Science &amp; Engineering</p>
-        <p class="org">University of Oviedo</p>
+<!-- ASISTENTA -->
+<article class="proj proj-dark" id="asistenta" aria-labelledby="asistenta-title">
+  <div class="wrap">
+    <div class="split">
+      <div class="steps">
+        <div class="proj-head reveal">
+          <p class="eyebrow">Personal AI agent · MIT · 2026</p>
+          <h3 id="asistenta-title" class="proj-title">An assistant that<br>actually does things.</h3>
+          <p class="proj-desc">Asistenta lives on your own PC and you talk to it on Telegram. It controls your computer and TV, drafts email that waits for your OK, keeps reminders and multi-day goals, and remembers. Everything is free except the LLM key.</p>
+          <div class="btns"><a class="btn btn-light" href="https://github.com/nicogarrr/asistenta" rel="noopener">Source on GitHub</a></div>
+        </div>
+        <ol class="step-list">
+          <li class="step" data-step="0"><span class="n">01</span><div><h4>You ask on Telegram</h4><p>Voice or text, from anywhere. It answers with buttons when something needs your decision.</p></div></li>
+          <li class="step" data-step="1"><span class="n">02</span><div><h4>It works on your PC</h4><p>Computer use, OCR, the TV, the camera, your reminders, all on your own machine.</p></div></li>
+          <li class="step" data-step="2"><span class="n">03</span><div><h4>Nothing leaves without your OK</h4><p>An email or a risky action waits for approval in the chat or the local panel.</p></div></li>
+        </ol>
       </div>
-      <p class="when">2021 - 2025</p>
-      <p class="desc">Thesis graded 10/10: UWB indoor localization.</p>
+      <div class="sticky-phone">
+        <div class="phone" role="img" aria-label="Illustrative Telegram chat with Asistenta">
+          <div class="phone-notch" aria-hidden="true"></div>
+          <div class="phone-screen chat" aria-hidden="true">
+            <div class="chat-head"><span class="av">A</span><div><b>Asistenta</b><small>bot</small></div></div>
+            <div class="chat-body">
+              <div class="b me" data-s="0">Remind me to call the bank tomorrow at 10</div>
+              <div class="b bot" data-s="0">Done. Tomorrow 10:00, call the bank. <span class="kb"><i>Change time</i><i>Cancel</i></span></div>
+              <div class="b me" data-s="1">Put YouTube on the TV and turn it down</div>
+              <div class="b bot" data-s="1">YouTube is open on the TV. Volume lowered.</div>
+              <div class="b bot" data-s="2">Email to Laura is ready. Send it? <span class="kb"><i>Approve</i><i>Edit</i></span></div>
+              <div class="b me" data-s="2">Approve</div>
+            </div>
+          </div>
+        </div>
+        <p class="caption dark">Illustration. The real assistant speaks Spanish.</p>
+      </div>
     </div>
-  </section>
 
-  <section id="stack">
-    <h2>Stack</h2>
-    <div class="chips">
-      <span>Python</span><span>TypeScript</span><span>FastAPI</span><span>Next.js</span>
-      <span>PostgreSQL</span><span>Redis</span><span>SQLite</span><span>Docker</span>
-      <span>LLMs &amp; agents</span><span>RAG</span><span>C++</span><span>Rust</span>
-      <span>ESP32 / UWB</span><span>MQTT</span><span>Linux</span><span>Git</span>
+    <div class="bento dark-bento">
+      <div class="card stat reveal"><p class="k">Commits</p><p class="v"><span class="count" data-to="2240">2,240</span>+</p><p class="s">Since 2 Oct 2026</p></div>
+      <div class="card stat reveal"><p class="k">Test files</p><p class="v"><span class="count" data-to="1900">1,900</span>+</p><p class="s">Run on Linux and Windows CI</p></div>
+      <div class="card stat reveal"><p class="k">Test cases</p><p class="v"><span class="count" data-to="10000">10,000</span>+</p><p class="s">Vitest, counted in the repo</p></div>
+      <div class="card reveal stack-card"><p class="k">Built with</p><p class="chipline"><span>TypeScript</span><span>Node 24</span><span>SQLite</span><span>Telegram</span></p></div>
+      <div class="card wide reveal shot-card">
+        <img src="assets/img/asis_panel.webp" width="1400" height="927" alt="Asistenta's local web panel with sample data: a pending email approval, the chat, goals and routines" loading="lazy">
+        <p class="s">The local web panel: approvals, chat, goals, routines and parcels in one place, with sample data.</p>
+      </div>
+      <div class="card wide reveal feat-card"><p class="k">What it can do</p>
+        <ul class="feats">
+          <li><b>Computer use</b><span>Opens apps, reads the screen, clicks for you</span></li>
+          <li><b>Voice &amp; OCR</b><span>Dictation, voice notes and text from images</span></li>
+          <li><b>TV &amp; iPhone</b><span>YouTube on the TV, volume, shortcuts</span></li>
+          <li><b>Approvals</b><span>Email and risky actions wait for your OK</span></li>
+          <li><b>Memory &amp; goals</b><span>Remembers, and works on multi-day goals</span></li>
+          <li><b>Local panel</b><span>Tasks, routines and parcels on your PC</span></li>
+        </ul>
+      </div>
     </div>
-  </section>
+  </div>
+</article>
 
-  <section id="languages">
-    <h2>Languages</h2>
-    <div class="item">
-      <div><p class="role">Spanish</p></div>
-      <p class="when">native</p>
+<!-- UWB -->
+<article class="proj proj-light" id="uwb" aria-labelledby="uwb-title">
+  <div class="wrap two">
+    <div class="proj-head reveal">
+      <p class="eyebrow">B.Sc. thesis · graded 10/10</p>
+      <h3 id="uwb-title" class="proj-title">Centimetres,<br>where GPS can't go.</h3>
+      <p class="proj-desc">Real-time indoor positioning on UWB with ESP32 and DW3000 anchors. Double-sided two-way ranging cancels clock drift, the tag streams over MQTT, and a Python pipeline places players on a futsal court. It grew into R&amp;D on lunar and cave communications, and now into my master's thesis, Lazarillo: UWB fused with WiFi sensing for smart homes, fall detection and indoor sport.</p>
+      <div class="btns"><a class="btn btn-dark" href="https://github.com/nicogarrr/TFG_UWB_Localization" rel="noopener">Source on GitHub</a></div>
     </div>
-    <div class="item">
-      <div><p class="role">English</p></div>
-      <p class="when">B2 certified (Cambridge), studying towards C1</p>
+    <div class="court reveal" role="img" aria-label="Animated diagram: four anchors measure distance to a moving tag on a court">
+      <svg viewBox="0 0 400 260" aria-hidden="true">
+        <rect x="10" y="10" width="380" height="240" rx="14" class="court-line"/>
+        <line x1="200" y1="10" x2="200" y2="250" class="court-line"/>
+        <circle cx="200" cy="130" r="34" class="court-line"/>
+        <g class="anchors"><circle cx="24" cy="24" r="7"/><circle cx="376" cy="24" r="7"/><circle cx="24" cy="236" r="7"/><circle cx="376" cy="236" r="7"/></g>
+        <g class="tag-g">
+          <line class="ray r1" x1="24" y1="24" x2="150" y2="110"/><line class="ray r2" x1="376" y1="24" x2="150" y2="110"/>
+          <line class="ray r3" x1="24" y1="236" x2="150" y2="110"/><line class="ray r4" x1="376" y1="236" x2="150" y2="110"/>
+          <circle class="tag" cx="150" cy="110" r="8"/>
+        </g>
+      </svg>
+      <div class="court-stats"><span><b>4</b> anchors</span><span><b>DS-TWR</b> ranging</span><span><b>MQTT</b> stream</span></div>
     </div>
-    <div class="item">
-      <div><p class="role">German</p></div>
-      <p class="when">studying towards B2</p>
+  </div>
+  <div class="wrap">
+    <div class="others reveal">
+      <h4 class="others-title">Also</h4>
+      <a class="mini" href="https://github.com/nicogarrr/scrapyrealestate" rel="noopener"><b>scrapyrealestate</b><span>Telegram alerts for new listings on Spanish real-estate portals. Contributor to the fork.</span><em>Python · Scrapy · Playwright · Docker</em></a>
+      <a class="mini" href="https://github.com/nicogarrr/MusicApp-main" rel="noopener"><b>MusicApp</b><span>Desktop music app with a chat server and tests, from a university team course.</span><em>C# · .NET · 2024</em></a>
     </div>
-  </section>
+  </div>
+</article>
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <div class="contact-list">
-      <p>Email: <a href="mailto:nicoiglesiasgarcia10@gmail.com">nicoiglesiasgarcia10@gmail.com</a></p>
-      <p>GitHub: <a href="https://github.com/nicogarrr" target="_blank" rel="noopener noreferrer">github.com/nicogarrr</a></p>
-      <p>LinkedIn: <a href="https://www.linkedin.com/in/nicol%C3%A1s-iglesias-garcia-956269217/" target="_blank" rel="noopener noreferrer">nicolás-iglesias-garcia</a></p>
+<!-- ACTIVITY -->
+<section class="activity" aria-labelledby="act-title">
+  <div class="wrap">
+    <div class="card heat-card reveal">
+      <div class="heat-head"><h3 id="act-title">Shipping, most days.</h3><p><span class="count" data-to="14763">14,763</span> contributions on GitHub in the last year</p></div>
+      <div class="heat" id="heat" data-levels="00000000010000000110010000000000000000111111000000000000000000000000000000000000000000000000000000000000000000000000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001110000110000000000000000000000000000001000000110000000000000000000000000011111212111111111111111111113411111113324444213112211" data-start="2025-11-09" role="img" aria-label="GitHub contribution calendar for the last year, 14,763 contributions"></div>
+      <p class="s">From github.com/nicogarrr, 11 Nov 2026.</p>
     </div>
-  </section>
+  </div>
+</section>
+
+<!-- CHAPTER: EXPERIENCE -->
+<section class="chapter" id="experience" aria-label="Experience"><h2 class="chapter-title">Experience.</h2></section>
+
+<section class="timeline-sec" aria-label="Experience and education timeline">
+  <div class="wrap">
+    <div class="logo-marquee reveal" role="img" aria-label="University of Oviedo, ESA, EDP, Merkle">
+      <div class="track" aria-hidden="true">
+        <img src="assets/logos/universidad.webp" alt="" width="180" height="56"><img src="assets/logos/esa.webp" alt="" width="90" height="56"><img src="assets/logos/edp.webp" alt="" width="150" height="56"><img src="assets/logos/merkle.webp" alt="" width="180" height="32">
+        <img src="assets/logos/universidad.webp" alt="" width="180" height="56"><img src="assets/logos/esa.webp" alt="" width="90" height="56"><img src="assets/logos/edp.webp" alt="" width="150" height="56"><img src="assets/logos/merkle.webp" alt="" width="180" height="32">
+      </div>
+    </div>
+    <ol class="timeline">
+      <li class="reveal"><time>Nov 2024 – today</time><div><h3>AI Engineer</h3><p>Agents and LLM systems built for production.</p></div></li>
+      <li class="reveal"><time>2025 – 2026</time><div><h3>R&amp;D Researcher, lunar comms and robotics</h3><p class="org">University of Oviedo · ESA context</p><p>Propagation models for infrastructure-less zones (the lunar surface, caves) and experimental validation with UWB tracking firmware.</p></div></li>
+      <li class="reveal"><time>2025 – 2026</time><div><h3>M.Sc. in Computer Engineering</h3><p class="org">University of Oviedo · EPI Gijón</p><p>In progress. Thesis: Lazarillo, UWB plus WiFi CSI sensing.</p></div></li>
+      <li class="reveal"><time>Oct – Nov 2024</time><div><h3>Student employee</h3><p class="org">EDP Spain · Martín González del Valle scholarship</p></div></li>
+      <li class="reveal"><time>Summers 2022 &amp; 2023</time><div><h3>Data Scientist, intern</h3><p class="org">Merkle</p></div></li>
+      <li class="reveal"><time>2021 – 2025</time><div class="uni-card"><img src="assets/logos/universidad.webp" width="180" height="56" alt="University of Oviedo"><h3>B.Sc. in Data Science &amp; Engineering</h3><p>Thesis graded <b>10/10</b>: UWB indoor localization.</p></div></li>
+    </ol>
+    <div class="langs reveal">
+      <div><b>Spanish</b><span>Native</span></div>
+      <div><b>English</b><span>B2 certified (Cambridge), working towards C1</span></div>
+      <div><b>German</b><span>Working towards B2</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- CHAPTER: HOW I WORK -->
+<section class="chapter" id="how" aria-label="How I work"><h2 class="chapter-title">How I work.</h2></section>
+
+<section class="how" aria-label="Tools and principles">
+  <div class="wrap">
+    <div class="bento how-bento">
+      <div class="card big reveal"><p class="k">Principle</p><h3>Facts over vibes.</h3><p>A green subset doesn't certify the whole app, and a mocked test isn't a real run. I write down what was verified and what wasn't.</p></div>
+      <div class="card reveal"><p class="k">Languages</p><p class="chipline"><span>Python</span><span>TypeScript</span><span>C++</span><span>Rust</span><span>C#</span></p></div>
+      <div class="card reveal"><p class="k">Backend &amp; data</p><p class="chipline"><span>FastAPI</span><span>PostgreSQL</span><span>Redis</span><span>SQLite</span></p></div>
+      <div class="card reveal"><p class="k">AI</p><p class="chipline"><span>LLMs &amp; agents</span><span>RAG</span><span>Computer use</span><span>OCR</span></p></div>
+      <div class="card reveal"><p class="k">Hardware</p><p class="chipline"><span>ESP32</span><span>DW3000 UWB</span><span>MQTT</span></p></div>
+      <div class="card wide reveal marquee-card"><p class="k">Every day</p>
+        <div class="marquee rev" role="img" aria-label="Next.js, Node, Docker, Linux, Git, GitHub Actions, Vitest, pytest, Playwright">
+          <div class="track" aria-hidden="true"><span>Next.js</span><span>Node 24</span><span>Docker</span><span>Linux</span><span>Git</span><span>GitHub Actions</span><span>Vitest</span><span>pytest</span><span>Playwright</span><span>Next.js</span><span>Node 24</span><span>Docker</span><span>Linux</span><span>Git</span><span>GitHub Actions</span><span>Vitest</span><span>pytest</span><span>Playwright</span></div>
+        </div>
+      </div>
+      <div class="card reveal"><p class="k">Workflow</p><ul class="flow"><li>Small PRs</li><li>CI on every push</li><li>Tests before claims</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<!-- CHAPTER: CONTACT -->
+<section class="chapter" id="contact" aria-label="Contact"><h2 class="chapter-title">Contact.</h2></section>
+
+<section class="contact" aria-label="Get in touch">
+  <div class="wrap narrow">
+    <div class="messages" role="group" aria-label="Messages">
+      <p class="stamp">Today 9:41</p>
+      <p class="bubble them reveal">Hi! I'm Nicolás 👋</p>
+      <p class="bubble them reveal">Building something with AI agents, or need someone who ships? Let's talk.</p>
+      <p class="bubble me reveal"><a href="mailto:nicoiglesiasgarcia10@gmail.com">nicoiglesiasgarcia10@gmail.com</a></p>
+      <p class="delivered reveal">Delivered</p>
+    </div>
+    <div class="socials reveal">
+      <a href="mailto:nicoiglesiasgarcia10@gmail.com" aria-label="Email"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18v12H3z M3 6l9 7 9-7"/></svg><span>Email</span></a>
+      <a href="https://github.com/nicogarrr" rel="noopener" aria-label="GitHub"><svg viewBox="0 0 24 24" aria-hidden="true"><path class="fill" d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02a9.5 9.5 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0 0 12 2z"/></svg><span>GitHub</span></a>
+      <a href="https://www.linkedin.com/in/nicol%C3%A1s-iglesias-garcia-956269217/" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path class="fill" d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.5c0-1.3-.02-3-1.83-3-1.83 0-2.11 1.43-2.11 2.9V21H9z"/></svg><span>LinkedIn</span></a>
+    </div>
+  </div>
+</section>
 
 </main>
 
-<footer>
-  <div class="wrap">
-    <p>© 2026 Nicolás Iglesias García - Gijón, Spain</p>
+<footer class="foot">
+  <div class="wrap foot-in">
+    <p class="loc"><span class="pin" aria-hidden="true"></span>Gijón, Asturias, Spain · <span class="coords">43.5322° N, 5.6611° W</span></p>
+    <p>© 2026 Nicolás Iglesias García · Built by hand, no frameworks.</p>
   </div>
 </footer>
 
+<script src="main.js" defer></script>
 </body>
 </html>
